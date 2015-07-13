@@ -1,0 +1,18 @@
+<ion-header-bar class="bar-positive">
+  <h2 class="title">More Info</h2>
+
+</ion-header-bar>
+<ion-view>
+  <ion-content>
+    <ion-list class="list-inset">
+      <ion-item class="item-text-wrap detail-img" ng-repeat="item in members | filter:{shortname:whichmember}">
+        <img ng-src="img/{{item.shortname}}.png"
+             alt="{{ item.name }} Photo">
+        <h2>{{item.name}}</h2>
+        <h3>{{item.reknown}}</h3>
+        <p>{{item.bio | limitTo: 100}}
+          {{ item.bio }}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
